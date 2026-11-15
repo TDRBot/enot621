@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>enot621 - Homepage</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=DotGothic16&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="assets/icon.png">
+		<meta name="keywords" content="Inv, Enot, Rain World, Saint">
+		<meta name="author" content="TDRP">
+		<meta name="description" content="looking for little old me? admit it, you missed me~">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="topbar">
+			<a href="index.html">Homepage</a> &bullet;
+			<a href="https://tdrbot.github.io">Main Site</a> &bullet;
+			<a href="https://tdrbot.github.io/projects">Other Sites</a> &bullet;
+			<a href="random.html">Random Post</a> &bullet;
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Invcam</a>
+			<img class="pfp-topbar" src="assets/pfp_surv.png" height="38px">
+		</div>
+		<hr>
+		<div class="center homepage">
+			<div class="logo"></div>
+			<p id="blurbHomepage"></p>
+			<input style="width: 70%" type="text" id="searchInput" placeholder="Search for Inv... or Saint X Inv..." onkeydown="if(event.key === 'Enter') { searchMods(); }"> <button type="submit" onclick="searchMods();">Search</button>
+			<hr>
+			<div id="modGrid" class="mod-grid"></div>
+			<hr>
+			<p>&copy; TDRP 2026 - This is a normal site for searching up content related to Inv Rain World, or anything else Rain World related.</p>
+			<p><i>Our site (enot621) would like to declare we have no affiliation to the following parties: e621, e926, or e6ai. This site does not, and will not ever host any NSFW content. This website is purely satire and does not profit off anybody's content.<br><br> If you own content on here that you'd like to be removed, send an email to <a href="mailto:thedumbrobloxplayer+invtakedown@gmail.com">thedumbrobloxplayer+invtakedown@gmail.com</a></i></p>
+			<a href="privacy.html">Privacy Policy</a> &bullet;
+			<a href="tos.html">Terms of Service</a> &bullet;
+			<a href="disclaimer.html">General Disclaimer</a> &bullet;
+			<a href="https://github.com/TDRBot/enot621">Source Code!!!</a>
+		</div>
+		<script src="search.js"></script>
+		<script>
+			let blurbs = [
+				"Browse the Invternet... with no ads!",
+				"Inv? Yes. Saint? Yes. Saint X Inv? Hmmm... I haven't decided yet.",
+				"If you mistook this for another site... Sorry, I guess?",
+				"Three feet yet big it's an Enot. They're waiting for the call of Andrew.",
+				"Thanks, Andrew.",
+				"sofanthiel",
+				"\"Enot was never actually intended to be in the final version of Rain World: Downpour. Initially, AndrewFM created them as a more 'challenging' and 'silly' version of the Artificer campaign when we were first making the MSC mod back in 2017. However, our playtesters (having played Artificer right before) thought the campaign was too harsh for even the hardiest of Rain World players (Admittedly, as said before, the Inv campaign was made as a joke during 2017), and most of the dev team thought of deleting their entire campaign mid-way through development in favor of developing other campaigns such as the aforementioned Artificer and Saint campaign. However, AndrewFM was pretty persistent in keeping them in the game that eventually the rest of us conceded, and they ended up in the final version of More Slugcats. Thanks, Andrew,\" - riv otter",
+				"AndrewFM egg > Chicken egg",
+				"Nobody here but us slugcats!",
+				"So my plans are RUINED because the website was REJECTED because APPARENTLY Inv isn't a \"\"\"real person,\"\"\" anyways here's the website.",
+				"Yeah, Inv and Saint are gay. Keep scrolling.",
+				"This website reuses code from <a href=\"https://github.com/TDRBot/undertale-mod-browser\" target=\"_blank\">UNDERTALE Mod Browser</a>.",
+				"TDRP officially marries Inv TODAY!!!",
+				"Plantex likes Saint. TDRP likes Inv. Inv X Saint? Plantex X TDRP? Hmmm... /j",
+				"This website is such a waste of time and money lol.",
+				"Gentle Rain World fans, welcome to enot621.",
+				"Rule number one of enot621: You do not talk about enot621.<br>Rule number two of enot621: You do NOT talk about enot621.",
+				"Rule number three of enot621: If someone yells \"Oh my gosh! e621!\", contacts the creator regarding the name, or leaves the site regarding the name, tell them the satire.",
+				"Fourth rule of enot621: Only one guy operates the website.",
+				"Fifth rule of enot621: One post at a time, fellas.",
+				"Sixth rule of enot621: No <i>questionable</i> apparatuses or intentions.",
+				"Seventh rule of enot621: The site will operate as long as it has to.",
+				"And the eighth, and final rule for enot621: If this is your first time on the site, you have to view a post.",
+				"He's the wawa boy with the wawa brigade.",
+				"Five Pebbsi: Triple Affirmative. Now comes in three delicious flavors.<br><br>Would you like to try a sample?",
+				"I genuinely wonder how many people can mistake this for another website.",
+				"<img src=\"assets/pfp_enot1.png\">",
+				"good night, <b><i>gamer...</i></b>",
+				"goodbye, <b><i>gamer...</i></b>",
+				"game over, <b><i>gamer...</i></b>",
+				"rest in piece, <b><i>gamer...</i></b>",
+				"rest in piss, <b><i>gamer...</i></b>",
+				"?ploo",
+				"<i>looking for little old me? admit it, you missed me~</i>",
+				"Inv doesn't get any women because they don't go to the gym.",
+				"\"guy who pronounced .png as 'dot pinge'\" - Toby Fox",
+				"enot621 > e621",
+				"Wordle 1,974 5/6<br><br>⬛🟩⬛⬛⬛<br>⬛⬛🟩⬛⬛<br>⬛⬛⬛⬛⬛<br>⬛⬛⬛🟨🟨<br>🟩🟩🟩🟩🟩",
+				"enot vs john wick, who wins?",
+				"X, the everything app got nothing on enot621 (trademarked)",
+				"i can literally write whatever i want",
+				"<a href=\"https://rainworld.miraheze.org/wiki/Inv\">https://rainworld.miraheze.org/wiki/Inv</a>"
+			]
+			
+			let random = Math.floor(Math.random() * blurbs.length);
+			
+			document.getElementById('blurbHomepage').innerHTML = blurbs[random]
+		</script>
+	</body>
+</html>
