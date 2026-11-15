@@ -89,6 +89,14 @@ const characters = [
     {
         name: "Survivor",
         pfps: ["pfp_surv.png"]
+    },
+    {
+        name: "Vulture",
+        pfps: ["pfp_vulture.png"]
+    },
+    {
+        name: "Lantern Mouse",
+        pfps: ["pfp_lanternmouse1.png", "pfp_lanternmouse2.png", "pfp_lanternmouse3.png", "pfp_lanternmouse4.png", "pfp_lanternmouse1_noglow.png", "pfp_lanternmouse3_noglow.png", "pfp_lanternmouse4_noglow.png"]
     }
 ];
 
@@ -577,6 +585,13 @@ async function loadPost() {
         );
 
         // Generate random comments
+		let postsviewed = Math.floor(window.localStorage.getItem("posts-viewed"));
+		
+		postsviewed++
+		
+		window.localStorage.setItem("posts-viewed", postsviewed);
+		
+		// Generate random comments
         generateComments();
 
     } catch (error) {

@@ -113,3 +113,25 @@ a:visited {
 .admin-user {
     color: #ffff55;
 }
+
+button {
+	background-color: #001133;
+	color: white;
+	border: 2px solid white;
+	font-family: inherit;
+	padding: 5px;
+}
+
+input {
+	background-color: #001133;
+	border: 2px solid white;
+	color: white;
+	padding: 5px;
+}
+
+select, option {
+	background-color: #330606;
+	color: white;
+	padding: 5px;
+	border: solid 2px white
+}

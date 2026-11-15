@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>enot621 - User Page</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=DotGothic16&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="assets/icon.png">
+		<meta name="keywords" content="Inv, Enot, Rain World, Saint">
+		<meta name="author" content="TDRP">
+		<meta name="description" content="looking for little old me? admit it, you missed me~">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<script src="user.js"></script>
+	</head>
+
+	<body>
+		<div class="topbar">
+			<a href="index.html">Homepage</a> &bullet;
+			<a href="https://tdrbot.github.io">Main Site</a> &bullet;
+			<a href="https://tdrbot.github.io/projects">Other Sites</a> &bullet;
+			<a href="random.html">Random Post</a> &bullet;
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Invcam</a>
+			<a href="user.html"><img class="pfp-topbar" id="pfpUser" src="assets/pfp_surv.png" height="38px"></a>
+		</div>
+		<hr>
+		<img src="assets/pfp_surv.png" width="100px" id="pfpUserpage"><span class="comment-user" id="username">Guest User</span>
+		<br>
+		<hr>
+		<p>This isn't evidence that I'm making an account system. I just wanted to make the website have more content aside from posts.</p>
+		<hr>
+		<p id="totalcount">Total posts viewed: Loading...</p>
+		<hr>
+		<p>User actions:</p>
+		<ul>
+			<li><a href="mailto:thedumbrobloxplayer+submitinv@gmail.com">Submit an image</a></li>
+			<li>
+				Change PFP:
+				<select style="width: 200px;" id="pfpSelector" onchange="previewPfp()">
+					<optgroup label="Slugcats">
+						<option value="pfp_surv">Survivor</option>
+						<option value="pfp_monk">Monk</option>
+						<option value="pfp_hunter">Hunter</option>
+						<option value="pfp_gorm1">Gourmand</option>
+						<option value="pfp_gorm2">Gourmand (Blushing)</option>
+						<option value="pfp_arti1">Artificer</option>
+						<option value="pfp_arti2">Artificer (Anime)</option>
+						<option value="pfp_arti3">Artificer (Blushing)</option>
+						<option value="pfp_spear">Spearmaster</option>
+						<option value="pfp_riv">Rivulet</option>
+						<option value="pfp_saint1">Saint</option>
+						<option value="pfp_saint2">Saint (Angry)</option>
+						<option value="pfp_enot1">Inv</option>
+						<option value="pfp_enot2">Inv (Thinking)</option>
+					</optgroup>
+					<optgroup label="Lizards">
+						<option value="pfp_greenlizard">Green Lizard</option>
+						<option value="pfp_pinklizard">Pink Lizard</option>
+						<option value="pfp_bluelizard">Blue Lizard</option>
+						<option value="pfp_whitelizard">White Lizard</option>
+						<option value="pfp_yellowlizard">Yellow Lizard</option>
+						<option value="pfp_blacklizard">Black Lizard</option>
+						<option value="pfp_cyanlizard">Cyan Lizard</option>
+						<option value="pfp_redlizard">Red Lizard</option>
+					</optgroup>
+					<optgroup label="Iterators">
+						<option value="pfp_pebbles">Five Pebbles</option>
+						<option value="pfp_moon">Looks to the Moon</option>
+						<option value="pfp_sliverofstraw">Sliver of Straw</option>
+					</optgroup>
+					<optgroup label="Lantern Mice">
+						<option value="pfp_lanternmouse2">Lantern Mouse</option>
+						<option value="pfp_lanternmouse1">Blue Lantern Mouse</option>
+						<option value="pfp_lanternmouse3">Pink Lantern Mouse</option>
+						<option value="pfp_lanternmouse4">Orange Lantern Mouse</option>
+						<option value="pfp_lanternmouse1_noglow">Blue Lantern Mouse (No Glow)</option>
+						<option value="pfp_lanternmouse3_noglow">Pink Lantern Mouse (No Glow)</option>
+						<option value="pfp_lanternmouse4_noglow">Orange Lantern Mouse (No Glow)</option>
+					</optgroup>
+					<optgroup label="Miscellaneous">
+						<option value="pfp_scavenger1">Scavenger</option>
+						<option value="pfp_scavenger2">Scavenger (Angry)</option>
+						<option value="pfp_vulture">Vulture</option>
+					</optgroup>
+				</select>
+				<button type="submit" onclick="submitPfp()">Change PFP</button>
+			</li>
+			<li>
+				<label for="usernamechange">Change Username: </label>
+				<input type="text" name="usernamechange" id="usernameinput" placeholder="InvFan1337">
+				<button type="submit" onclick="changeUsername()">Change Username</button>
+			</li>
+			<li>
+				<a href="https://tdrbot.github.io/redirect/discord">Join our Discord server!</a>
+			</li>
+			<li>
+				<label>Automatically display all posts on homepage (Not Recommended): </label>
+				<select id="settingAutosearch">
+					<option value="true">On</option>
+					<option value="false">Off</option>
+				</select>
+				<button type="submit" onclick="changeAutoSearch()">Apply</button>
+			</li>
+		</ul>
+	</body>
+</html>
