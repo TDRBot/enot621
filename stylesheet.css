@@ -120,6 +120,7 @@ button {
 	border: 2px solid white;
 	font-family: inherit;
 	padding: 5px;
+	cursor: pointer;
 }
 
 input {
@@ -127,11 +128,14 @@ input {
 	border: 2px solid white;
 	color: white;
 	padding: 5px;
+	cursor: text;
+	font-family: inherit;
 }
 
 select, option {
 	background-color: #330606;
 	color: white;
 	padding: 5px;
-	border: solid 2px white
+	border: solid 2px white;
+	font-family: inherit;
 }

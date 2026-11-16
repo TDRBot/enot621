@@ -39,13 +39,23 @@ function displayMods(mods) {
 // -----------------------------
 
 function searchMods() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
+	const query = document.getElementById('searchInput').value.toLowerCase();
+    const searchTerms = query.toLowerCase().split(/\s+/).filter(term => term.trim() !== "");
 
-    const filteredMods = modsList.filter(mod =>
-        mod.Description.toLowerCase().includes(query) ||
-		mod.Image.toLowerCase().includes(query) ||
-		mod.Source.toLowerCase().includes(query)
-    );
+    const filteredMods = modsList.filter(mod => {
+		if (searchTerms.length === 0) return true;
+
+		const tagsString = Array.isArray(mod.Tags) ? mod.Tags.join(' ') : mod.Tags;
+		
+		const modContent = `
+			${mod.Description || ''} 
+			${mod.Image || ''} 
+			${mod.Source || ''} 
+			${tagsString || ''}
+		`.toLowerCase();
+
+		return searchTerms.every(term => modContent.includes(term));
+	});
 
     displayMods(filteredMods);
 }

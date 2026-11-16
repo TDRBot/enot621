@@ -44,7 +44,11 @@ const characters = [
     },
     {
         name: "Inv",
-        pfps: ["pfp_enot1.png", "pfp_enot2.png"]
+        pfps: ["pfp_enot1.png", "pfp_enot2.png", "pfp_enot4.png"]
+    },
+    {
+        name: "inv imPERSAONatOR!!!!!1!",
+        pfps: ["pfp_enot3.png"]
     },
     {
         name: "Gourmand",
@@ -67,6 +71,10 @@ const characters = [
         pfps: ["pfp_pebbles.png"]
     },
 	{
+        name: "No Significant Harassment",
+        pfps: ["pfp_nsh.png"]
+    },
+	{
         name: "Sliver of Straw",
         pfps: ["pfp_sliverofstraw.png"]
     },
@@ -76,7 +84,7 @@ const characters = [
     },
     {
         name: "Saint",
-        pfps: ["pfp_saint1.png", "pfp_saint2.png"]
+        pfps: ["pfp_saint1.png", "pfp_saint2.png", "pfp_saint3.png", "pfp_saint4.png"]
     },
     {
         name: "Scavenger",
@@ -88,11 +96,27 @@ const characters = [
     },
     {
         name: "Survivor",
-        pfps: ["pfp_surv.png"]
+        pfps: ["pfp_surv.png", "pfp_surv_construct.png"]
+    },
+	{
+        name: "Watcher",
+        pfps: ["pfp_watcher.png", "pfp_watcher_hide.png"]
     },
     {
         name: "Vulture",
         pfps: ["pfp_vulture.png"]
+    },
+    {
+        name: "Miros Bird",
+        pfps: ["pfp_mirosbird.png"]
+    },
+	{
+        name: "Garbage Worm",
+        pfps: ["pfp_garbageworm1.png", "pfp_garbageworm2.png"]
+    },
+	{
+        name: "Overseer",
+        pfps: ["pfp_observer1.png", "pfp_observer2.png"]
     },
     {
         name: "Lantern Mouse",
@@ -107,7 +131,7 @@ const characters = [
 
 const adminConfig = {
     // Probability weights:
-    // 1 regular comment : 4 admin comments
+    // 1 regular comment : 6 admin comments
     regularWeight: 1,
     adminWeight: 6,
 
@@ -150,6 +174,19 @@ const adminConfig = {
 				"i hate this website",
 				"i hate ALL OF YOU FIUDWIHDWIUHWIQHDUWKJDHWADIUKJHKJDMW",
 				"i misclicked and did not mean to approve of this post"
+            ]
+        },
+		
+		"No Significant Harassment": {
+            comments: [
+                "hey everyone! how's it going??",
+				"i don't know why im an admin, but it's cool!",
+				"next person to comment gets one of pebbles's pearls!",
+				"at least i didnt accidentally approve of this post",
+				"love y'all!",
+				"does anyone know how hunter is doing?",
+				"hunter has stage 4 cancer guys srry abt that",
+				"when i say 'stay' you say 'here'"
             ]
         },
 		
@@ -407,7 +444,8 @@ const commentMessages = [
 	"where is my triple affirmative",
 	"i have achieved nothing today",
 	"see you next cycle",
-	"can you feature my post moon"
+	"can you feature my post moon",
+	"who is inv and why are they important??"
 ];
 
 
@@ -570,11 +608,11 @@ async function loadPost() {
 
         // Description
         const description = document.createElement("p");
-        description.textContent = post.Description;
+        description.innerHTML = post.Description;
 
         // Source
         const source = document.createElement("p");
-        source.textContent = "Source: " + post.Source;
+        source.innerHTML = "Source: " + post.Source;
 
         // Display everything
         postContainer.replaceChildren(

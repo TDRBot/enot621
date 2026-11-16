@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>enot621 - Searching Guide</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=DotGothic16&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="assets/icon.png">
+		<meta name="keywords" content="Inv, Enot, Rain World, Saint">
+		<meta name="author" content="TDRP">
+		<meta name="description" content="looking for little old me? admit it, you missed me~">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<script src="user.js"></script>
+	</head>
+	<body>
+		<div class="topbar">
+			<a href="index.html">Homepage</a> &bullet;
+			<a href="https://tdrbot.github.io">Main Site</a> &bullet;
+			<a href="https://tdrbot.github.io/projects">Other Sites</a> &bullet;
+			<a href="random.html">Random Post</a> &bullet;
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Invcam</a>
+			<a href="user.html"><img class="pfp-topbar" id="pfpUser" src="assets/pfp_surv.png" height="38px"></a>
+		</div>
+		<hr>
+		<h1>enot621 - Search Guide</h1>
+		<p>Hello! You're probably here because you want to know how to search! Even though it's quite stupid, you can use this page to figure out <i>exactly</i> how searching works, and how you can word your searches to get your desired posts.</p>
+		<br>
+		<p>When searching, you can search for a single tag such as <b>inv</b>. This will search for any post that has the tag inv in its tags or metadata.</p>
+		<p>You can search for multiple tags such as <b>inv</b> and <b>plushie</b>. This will search for any post that has both of the tags.</p>
+		<p>Additionally, you can search by file name and file format. Such as: <b>inv</b> and <b>.gif</b>. This will look for any tags tagged inv and are in the GIF file format.
+		<br>
+		<hr>
+		<h2>List of most commonly-used tags.</h2>
+		<ol id="tagList"></ol>
+
+		<script>
+		async function loadTags() {
+			const response = await fetch('./InvList.json');
+			const posts = await response.json();
+
+			const tagCounts = {};
+
+			posts.forEach(post => {
+				if (!post.Tags) return;
+
+				post.Tags.trim().split(/\s+/).forEach(tag => {
+					tag = tag.toLowerCase();
+
+					if (tag) {
+						tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+					}
+				});
+			});
+
+			const sortedTags = Object.entries(tagCounts)
+				.sort((a, b) => b[1] - a[1]);
+
+			const tagList = document.getElementById('tagList');
+
+			sortedTags.forEach(([tag, count]) => {
+				const li = document.createElement('li');
+				li.textContent = `${tag} (${count})`;
+				tagList.appendChild(li);
+			});
+		}
+
+		loadTags();
+		</script>
+	</body>
+</html>
