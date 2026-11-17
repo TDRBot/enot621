@@ -25,7 +25,7 @@
 		</div>
 		<hr>
 		<div class="center homepage">
-			<div class="logo"></div>
+			<div class="mascot-temp" id="mascot"></div>
 			<p id="blurbHomepage"></p>
 			<input style="width: 70%" type="text" id="searchInput" placeholder="Search for Inv... or Saint X Inv..." onkeydown="if(event.key === 'Enter') { searchMods(); }"> <button type="submit" onclick="searchMods();">Search</button>
 			<br>
@@ -34,7 +34,8 @@
 			<div id="modGrid" class="mod-grid"></div>
 			<hr>
 			<p>&copy; TDRP 2026 - This is a normal site for searching up content related to Inv Rain World, or anything else Rain World related.</p>
-			<p><i>Our site (enot621) would like to declare we have no affiliation to the following parties: e621, e926, or e6ai. This site does not, and will not ever host any NSFW content. This website is purely satire and does not profit off anybody's content.<br><br> If you own content on here that you'd like to be removed, send an email to <a href="mailto:thedumbrobloxplayer+invtakedown@gmail.com">thedumbrobloxplayer+invtakedown@gmail.com</a></i></p>
+			<br>
+			<p>If you own content on here that you'd like to be removed, send an email to <a href="mailto:thedumbrobloxplayer+invtakedown@gmail.com">thedumbrobloxplayer+invtakedown@gmail.com</a></i></p>
 			<a href="privacy.html">Privacy Policy</a> &bullet;
 			<a href="tos.html">Terms of Service</a> &bullet;
 			<a href="disclaimer.html">General Disclaimer</a> &bullet;
@@ -91,5 +92,6 @@
 			
 			document.getElementById('blurbHomepage').innerHTML = blurbs[random]
 		</script>
+		<script src="mascot.js"></script>
 	</body>
 </html>

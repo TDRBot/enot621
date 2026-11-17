@@ -10,7 +10,7 @@ const modsList = [];
 async function fetchMods() {
     const response = await fetch('InvList.json');
     modsList.push(...await response.json());
-	if (localStorage.getItem("autosearch") == true) {
+	if (localStorage.getItem("autosearch") == "true") {
 		displayMods(modsList);
 	}
 }

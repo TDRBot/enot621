@@ -29,6 +29,12 @@ if (asearchval == null) {
 	asearchval = localStorage.getItem('autosearch');
 }
 
+let mascot = localStorage.getItem('mascot');
+if (mascot == null) {
+	localStorage.setItem('mascot', 'normal');
+	mascot = localStorage.getItem('mascot');
+}
+
 // -----------------------------
 // USER PAGE CONTENT
 // -----------------------------
@@ -75,6 +81,12 @@ function changeAutoSearch() {
 	window.location.reload();
 }
 
+function changeMascot() {
+	let tempmascot = document.getElementById('mascotSelector');
+	
+	localStorage.setItem('mascot', tempmascot.value);
+	window.location.reload();
+}
 
 // -----------------------------
 // INITIALIZATION

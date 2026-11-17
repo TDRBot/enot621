@@ -1,3 +1,183 @@
+/*/------------------------------------ 
+   MASCOTS
+/*/
+
+.mascot-temp {
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot {
+	background-image: url('assets/mascot.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot:hover {
+	background-image: url('assets/mascot-hover.png');
+}
+
+.mascot-rain {
+	background-image: url('assets/mascot_rain.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-rain:hover {
+	background-image: url('assets/mascot_rain_hover.png');
+}
+
+.mascot-invkiss {
+	background-image: url('assets/mascot_invkiss.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-invkiss:hover {
+	background-image: url('assets/mascot_invkiss_hover.png');
+}
+
+.mascot-monk {
+	background-image: url('assets/mascot_monk.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-monk:hover {
+	background-image: url('assets/mascot_monk_hover.png');
+}
+
+.mascot-easter {
+	background-image: url('assets/mascot_easter.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-easter:hover {
+	background-image: url('assets/mascot_easter_hover.png');
+}
+
+.mascot-arti {
+	background-image: url('assets/mascot_arti.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-arti:hover {
+	background-image: url('assets/mascot_arti_hover.png');
+}
+
+.mascot-rivy {
+	background-image: url('assets/mascot_rivy.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-rivy:hover {
+	background-image: url('assets/mascot_rivy_hover.png');
+}
+
+.mascot-hunter {
+	background-image: url('assets/mascot_hunter.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+/*/------------------------------------ 
+   MONTLY MASCOTS
+/*/
+
+.mascot-january {
+	background-image: url('assets/mascot_january.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-february {
+	background-image: url('assets/mascot_february.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-march {
+	background-image: url('assets/mascot_march.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-may {
+	background-image: url('assets/mascot_may.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-june {
+	background-image: url('assets/mascot_june.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-july {
+	background-image: url('assets/mascot_july.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-august {
+	background-image: url('assets/mascot_august.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-september {
+	background-image: url('assets/mascot_september.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-october {
+	background-image: url('assets/mascot_october.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-november {
+	background-image: url('assets/mascot_november.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+.mascot-december {
+	background-image: url('assets/mascot_december.png');
+	width: 330px;
+	height: 323px;
+	display: inline-table;
+}
+
+
+/*/------------------------------------ 
+   REST OF CSS
+/*/
+
 body {
 	background-color: #111336;
 	font-family: Didact Gothic, sans-serif;
@@ -6,17 +186,6 @@ body {
 	margin-top: 0px;
 	margin-left: 8px;
 	margin-right: 8px;
-}
-
-.logo {
-	background-image: url('assets/mascot.png');
-	width: 330px;
-	height: 323px;
-	display: inline-table;
-}
-
-.logo:hover {
-	background-image: url('assets/mascot-hover.png');
 }
 
 .center {
